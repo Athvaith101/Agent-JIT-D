@@ -1,0 +1,78 @@
+{
+  "gates": [
+    {
+      "id": "live_nemotron",
+      "priority": "P0",
+      "status": "pending_external",
+      "evidence": {
+        "complete": [],
+        "contributions": [],
+        "connectivity": []
+      },
+      "why": "Inspect accepted/rejected proposals and complete usage; real calls alone do not establish quality."
+    },
+    {
+      "id": "provider_and_authority",
+      "priority": "P0",
+      "status": "pending_external",
+      "evidence": 0,
+      "why": "Importer-declared real records require independent provenance review; origin separation is not proof."
+    },
+    {
+      "id": "unseen_incidents",
+      "priority": "P0",
+      "status": "pending_external",
+      "why": "Independent author must freeze incidents before running evaluation."
+    },
+    {
+      "id": "novelty",
+      "priority": "P0",
+      "status": "not_established",
+      "why": "Same-evidence study has not shown a semantic-slicing advantage."
+    },
+    {
+      "id": "model_baseline",
+      "priority": "P1",
+      "status": "pending_external",
+      "evidence": [],
+      "why": "Single-call full-input comparison; review coverage, failures and actual usage."
+    },
+    {
+      "id": "incident_resolution",
+      "priority": "P1",
+      "status": "implemented_not_exercised",
+      "why": "Reviews reverify evidence; notes never override UNKNOWN."
+    },
+    {
+      "id": "shadow_pilot",
+      "priority": "P1",
+      "status": "pending_external",
+      "evidence": {
+        "cases": 0,
+        "declared_real_cases": 0,
+        "review_count": 0
+      },
+      "why": "Acceptance is distinct from independently established correctness."
+    },
+    {
+      "id": "windows_validation",
+      "priority": "P1",
+      "status": "pending_external",
+      "why": "Run installation, tests, HTTP connector and live harness on the actual Windows laptop."
+    },
+    {
+      "id": "submission_demo",
+      "priority": "P1",
+      "status": "implemented_not_recorded",
+      "why": "Capture three-minute demonstration and reconcile claims with evidence."
+    },
+    {
+      "id": "hosted_demo",
+      "priority": "P2",
+      "status": "configured_not_deployed",
+      "why": "Protected single-instance deployment configuration requires an actual host test."
+    }
+  ],
+  "ready_to_claim_field_validation": false,
+  "note": "These are evidence gates, not a prediction of competition results. Uploaded reports are not cryptographically authenticated."
+}

@@ -1,0 +1,9 @@
+# Review implementation status
+
+Implemented: persistent single-instance Render blueprint, pinned runtime closure without pytest, Python 3.12 CI target, Vercel bundle declarations and explicit zero-call restriction, CSP font directive, neutral fluid navigation, shared workspace navigation and branding, consistent workspace footers, local Geist/Geist Mono with license, SVG nav icons, readable explicit font-size floor, nonblocking quick start and header guide button, SVG close icons centered within fixed circles, graph ports and curved edges with execution-only packet motion, guided real API lifecycle, actual model/budget configuration badge, strict recorded-provider-evidence projection, usage CSV, passport JSON link, metadata/favicon/social image, browser 401/404 views, judge instructions and video outline.
+
+Existing evidence gates, reviewer checks and bounded repair semantics are retained. Graph edges visualize the existing ordered bounded graph; this does not add a general graph compiler or synthetic per-node success states. Existing style sheets remain as layout foundations; shared tokens/components consolidate new product surfaces without deleting proven layout rules.
+
+External work pending: paid live evidence, N-case provider baseline, measured end-to-end cost statement, hosted URL smoke/SSE/cold-start checks, Windows execution, Docker build, public source publication, judge credentials handoff and recording the final public video. No credential is available here, and none of those results is fabricated. No token-avoidance count is animated without a valid measured basis. Reported historical user-session observations remain explicitly unverified and separate from repository evidence.
+
+Optional features not added: PDF passports and a global command palette. JSON passports and direct navigation are included. Additional drift scenarios (mills, truncation and more) remain available in Studio.

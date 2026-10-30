@@ -1,0 +1,4 @@
+{"id": "tax_in_cents", "title": "Only the tax field switches to cents", "kind": "drift", "fault_op": "invoice.get", "repairable": false,
+ "author": "JIT-D authors (EXAMPLE, not independent)", "independent": false,
+ "desc": "invoice.tax becomes an integer number of cents while every other field stays in dollars. A drift class the built-in scenarios do not cover.",
+ "mutations": [{"endpoint": "invoice.get", "op": "scale", "fields": ["tax"], "factor": 100}]}

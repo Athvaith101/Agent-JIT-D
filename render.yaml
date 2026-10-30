@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: agent-jit-d
+    runtime: docker
+    plan: 0.5c-512mb
+    numInstances: 1
+    healthCheckPath: /api/health
+    disk:
+      name: jitd-data
+      mountPath: /app/data
+      sizeGB: 1
+    envVars:
+      - key: JITD_PROFILE
+        value: local
+      - key: JITD_REQUIRE_AUTH
+        value: "1"
+      - key: JITD_ACCESS_TOKEN
+        generateValue: true
+      - key: JITD_DATA_DIR
+        value: /app/data
+      - key: JITD_BUDGET_DB
+        value: /app/data/platform.sqlite3
+      - key: JITD_MAX_MODEL_CALLS
+        value: "0"
+      - key: JITD_MODEL_MAX_OUTPUT_TOKENS
+        value: "4096"
+      - key: NEBIUS_MODEL_ID
+        value: nvidia/nemotron-3-super-120b-a12b
+      - key: NEBIUS_BASE_URL
+        value: https://api.tokenfactory.nebius.com/v1/

@@ -1,0 +1,5 @@
+# Supply JITD_DOMAIN and set the same hostname in JITD_ALLOWED_HOSTS.
+# Run Caddy on the same host; the application binds only to loopback.
+{$JITD_DOMAIN} {
+    reverse_proxy 127.0.0.1:8000
+}

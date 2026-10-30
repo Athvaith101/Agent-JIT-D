@@ -1,0 +1,14 @@
+{
+  "kind": "live_preflight_no_calls",
+  "compiles": 1,
+  "configured": false,
+  "budget": {
+    "limit": 300,
+    "used": 0,
+    "remaining": 300
+  },
+  "conservative_request_bound": 12,
+  "sdk_automatic_retries": 0,
+  "code_sha256": "4f724892fa5e1514f56331b90b4194669422d2761f3f2450f51f983c316bfdc0",
+  "note": "Request ceiling, not a dollar ceiling. Failed requests can consume quota and have unknown billing."
+}

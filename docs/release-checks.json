@@ -1,0 +1,468 @@
+{
+  "release": "2.5.3-submission",
+  "verified_date": "2026-10-29",
+  "environment": "Linux Python 3.12; pinned requirements.lock in isolated virtual environment",
+  "tests": {
+    "passed": 69,
+    "failed": 0,
+    "seconds": 12.45,
+    "scope": "Studio, canvas, hybrid and Nebius smoke targeted regression; full prior release suite was 289"
+  },
+  "studio_browser": {
+    "errors": [],
+    "mobileBuildOverflow": false,
+    "mobileRunOverflow": false,
+    "checks": [
+      "assurance-zero-budget-shadow-report",
+      "draft-create",
+      "28-case-validation",
+      "self-publication-refused",
+      "separate-reviewer-publish",
+      "clean-execution",
+      "drift-halt",
+      "schema-only-counterexample",
+      "impact-preview",
+      "separate-reviewer-repair",
+      "verified-retry",
+      "passport",
+      "unknown-halt",
+      "draft-edit-invalidates-validation",
+      "human-inclusive-cost-projection",
+      "viewer-read-only"
+    ],
+    "providerCalls": 0
+  },
+  "original_lab_browser": {
+    "errors": [],
+    "mobileOverflow": false,
+    "checks": [
+      "named-user-login",
+      "clean-execution",
+      "semantic-drift-halt",
+      "proposal",
+      "separate-reviewer-approval",
+      "verified-recovery",
+      "operations-status",
+      "viewer-read-only"
+    ],
+    "providerCalls": 0
+  },
+  "checks": {
+    "secret_scan": "clean",
+    "undefined_names": "Ruff F821 passed",
+    "javascript_syntax": "passed",
+    "pip_check": "no broken requirements",
+    "dependency_audit": "Existing pinned dependency closure unchanged; prior 29 October audit reported no known vulnerabilities",
+    "live_preflight": "zero provider calls; limit zero"
+  },
+  "not_verified": [
+    "Actual NVIDIA/Nebius model inference",
+    "Windows execution",
+    "Docker runtime/build",
+    "Remote CI",
+    "Public deployment",
+    "Independent field evaluation",
+    "Measured savings or actual always-LLM baseline",
+    "General agent or trace synthesis",
+    "Enterprise certification",
+    "Vercel cloud deployment on entrant account; adapter is local-smoke-checked only"
+  ],
+  "source_sha256": {
+    "jitd/__init__.py": "f1e42938a9183a8641fa0f1a3aa4f0f3cf7628c67185e25115ea73b18c8ceb47",
+    "jitd/aair_bench.py": "1cd6de337d216a0da388c19d702abb8a3f0f1e3cbbf880860dc2ca7007a0e86b",
+    "jitd/admin.py": "fbc871da80d1db6a4b9552d797646537cbddae235b6c794bf962ddce61c8d3b9",
+    "jitd/assumptions.py": "b67a29315232b59fbd3e5f8eb9cc3932a1435d9e1651dbb9f5fa96c2c6120c8b",
+    "jitd/authority_study.py": "4a0708cdd10173c93f362be035af9f4c0d1c84d46ab6aa5164d4e3c2f8afa9bb",
+    "jitd/bench.py": "0c599625a0c63316e3e62a93e13b78017ebdc0bde62c410b3ed78ca3e598ea2a",
+    "jitd/boundary.py": "59525c4760af61db29ab17e656b0a56c5cc821f70704c1f13b99f089517dd39a",
+    "jitd/compiler.py": "bea77e7b21b6d8406943ecde7aaa45ea2ae0c19b2df22a303e49c621af4b16ad",
+    "jitd/contracts.py": "63eedb1fe8a1577c4db038558aa5c6f50c5c697203565801f7ab6297c7219e2a",
+    "jitd/diagnosis.py": "5a10c02616bd52f91b47b4c361564319acd8b5d29f841ef1bf53bbda545c293c",
+    "jitd/escalation.py": "1b6cc0ddfc97a860bc339b055d12752353b6404841d1d53f1b4d2564ef5f994e",
+    "jitd/evidence_csv.py": "48df253bd7c21178ab5c8e6b5efc4ac751b5414db4ac807dcd3e15e98081b393",
+    "jitd/executor.py": "4335630d1caf5ff31d43d63ac1421ebc1b534997e683cdae62a9f5bd097e438e",
+    "jitd/external.py": "dd79acd5a1b984323dd2b99179c18081f2a5a075e3eca08722d5aecd402af758",
+    "jitd/fixtures.py": "6f55d0b639c99eb7f0b4d3ada4a9f3e4d6ae1f54dca90509b11ffe42ee506cb4",
+    "jitd/http_connector.py": "db8b07cf39d53763f4b96ae975c0ce924f73748576994051c6b5a74d0b5f2e39",
+    "jitd/integrate.py": "2be42d40bb91e0cc3c86591475a7126ad808bdb350b0c88af1b4ed23bc3debaf",
+    "jitd/lab.py": "0d1c677cd7d6d0e0ab257ad864c9de8c595c40ce1281b7a400a564984dfba98f",
+    "jitd/launch.py": "2e0c407724df1fc70a0dae02a86c799dd7cc5d2573e8fcdfbb16ee10a2f5730b",
+    "jitd/live.py": "1cb651c2668dcbb2ca5fac22260969a88b97bc8a82e0e69836a05fc7111a5b23",
+    "jitd/llm.py": "4d6963ab8cc76733f9b092763d39f2ed3c12f6776c52f06d81535f9f13400754",
+    "jitd/manifest.py": "9e18820f44c08e53df19ce436fd5c031f9b58caccb2aeceb4e90e1b1c675f043",
+    "jitd/meter.py": "cfedd52d89418f2fc4ca7804e68c113a8568815f0be252962572a53f02250dd5",
+    "jitd/model_baseline.py": "95608dd27c7192263975bce825da76c68e4ea14e9c721afb5af3c2ffc860cca1",
+    "jitd/money.py": "bc67b9dee05f86fe5497ded8b194aabfe5e6442c0aa9eda0ba3d21f39bdb3760",
+    "jitd/mutations.py": "b7dcd40c6e176187bb4de2036d52cc5c1c9e3d2076b13d5c067ea488a69ed02d",
+    "jitd/operations.py": "a22e5ff356f9e18befeec5ea0882dba17c5a4b2e4da8ff9e0eb6d1192fd5bc51",
+    "jitd/ops.py": "fca83c196e9bf29948607bcf9ef7c91bc934791e32ead8e8b4eeba83a9a658d4",
+    "jitd/oracle.py": "942d2fd5ba3c9c1909372bad23bf791ee7d49359a699d60a333cf3277330a806",
+    "jitd/paired_study.py": "5d118db0e50b66789faa185a9daa0c3e12d09f8ba858503bac37ca9b1b87f6f6",
+    "jitd/paths.py": "ab3d4993fd12b8c6276e69b3641e6857c6c5cbcb31e1514e0c77d6b7c34b9078",
+    "jitd/pilot.py": "cf25847a47c2f19b7b7efc5785d76c84667b10a14d06ecf6c2b64826044af2ff",
+    "jitd/platform.py": "27483cad53e71725d8ee36e9382ecb5387db922a103097c396fb7adf855e159c",
+    "jitd/readiness.py": "04b546b5cd2463cf82730ebe59763e860c94d67ef49897c036e0d97fa5f9daa8",
+    "jitd/recovery.py": "d9201be06608f2e0535b4286c724f7778ca0633f0cde6c77e89d6ee21ce7d23e",
+    "jitd/repair.py": "965205e49237131db3ccc5b79bd880459f09586120469c75ad550a11a93f79c5",
+    "jitd/scenarios.py": "1f11d89b9f31a144e8c280443373611e853e7f9a83b95fd74c96192007dfdcce",
+    "jitd/schemas.py": "854adbe43a0243c470797e4ae0344a8a2545a46b3e0e58607e360cc72d1f74ae",
+    "jitd/sdk.py": "07c68c48db1b4b6a27e6b6766b8c07789666ec0b5901fd12be7cf5c0fae2f148",
+    "jitd/server.py": "351e166b332349e6d8c2fd9a92d8412c6f4826f66e7f7061c8c69958e451a182",
+    "jitd/services.py": "00e354ff5d65f37b0e1769cae02c0d7ccfa54ca2c2c10bfbfaddc2e1e766a199",
+    "jitd/shadow.py": "d42a88f2eee6518b5fe744c9c9f83b0a6683c3b08ad1dedabb93686b4fb5715a",
+    "jitd/storage.py": "9459e1438a9b5f7131ef9b994e33449405c4f6e00c65ecaf2cb56baab49e901d",
+    "jitd/stream_stats.py": "14d8cf8a394edd42f8b8ce27bbb80ac1bda8bc618aafbe2c640be0fe16f9ff7b",
+    "jitd/studio.py": "50e4cbd2bed5f008e5c64fe5c412a9e630c43812fa4f4efc146ad6624c89b05e",
+    "jitd/studio_api.py": "1cec5d8a5a9594653ea84fa2be164391b53a121ba06aa9c0899489d3d0cdd74e",
+    "jitd/validate_worker.py": "205e3da8dffcaa4af365d2baa3ae0ff1a21bd350d8f283554db5a753007196ae",
+    "jitd/validation.py": "20092abcb1c69c021f1d7273e99a6b3d1a9eed14b6f9281c5ea69069c978e38b",
+    "web/assets/aair.js": "4b592e8f110f5560e4cf76c5fff7ea9d289c1db6d5510050332927c8eca46156",
+    "web/assets/app.css": "a3c773d90c189c2f488e77bf81942b9e3dcfc577e01a27df071a4d4e236b68a6",
+    "web/assets/app.js": "a75295a1d786e72d3b342a272f65ad0a77ea1c87fc171a8761048ea766131ad6",
+    "web/assets/operations.js": "679318c21b54b881a4e9cc2b3ff6a9bca07451c9f5b18895a991fb6b65113c03",
+    "web/assets/pilot.js": "9e87394e35eaa8cb10b46c265ea18e5895d0f44635c0afa786192062141ac1fa",
+    "web/assets/platform.css": "7cbff11eae214e7e7cfa8d24f15a814a1d57f9b1250088baf14fb687760ca744",
+    "web/assets/platform.js": "2c3228a2dd74d4c23c8de9dba776283d7016ee6b0491886b902822aa5b9a7e1f",
+    "web/assets/studio.css": "d789a20c2dea664319522e2e4ff134ffbe5f103865f213d0f9db22958b92450d",
+    "web/assets/studio.js": "67ea17995abc57fafc6877e132acbe7afc5e572469263f854787f33f52b737d7",
+    "web/index.html": "d5b6d67547c052e1c3c7ca2ecb0a2ac182cc2f0b0c9733641f0827a600c5a445",
+    "web/operations.html": "a18ef963cf8f8c52952bdd62974f6d299dc564ea43c0a8ed398bf848ec05ac1f",
+    "web/studio.html": "9eb7cbd47a499739109bc1e35c64f0275ae6a9422ec0f48321c4885324db5dc8"
+  },
+  "assurance": {
+    "mode": "shadow_only",
+    "planner": "exact bounded obligation cover",
+    "budget_units": "synthetic planning units",
+    "live_model_calls": 0
+  },
+  "current_source_sha256": {
+    "jitd/__init__.py": "3607355662023f88acfcf6cbd1c111d98d125dde46208f3f259d598fda733e84",
+    "jitd/aair_bench.py": "1cd6de337d216a0da388c19d702abb8a3f0f1e3cbbf880860dc2ca7007a0e86b",
+    "jitd/admin.py": "fbc871da80d1db6a4b9552d797646537cbddae235b6c794bf962ddce61c8d3b9",
+    "jitd/assumptions.py": "b67a29315232b59fbd3e5f8eb9cc3932a1435d9e1651dbb9f5fa96c2c6120c8b",
+    "jitd/assurance.py": "99e5b66fbdc6a8afd810dff5a0b6e73d3df7bc737130d5bd75dbe260a0eda482",
+    "jitd/assurance_bench.py": "81775c370efc1b64e1c34707df10ee0d28330b1eddd6abdfbe298c51c916ae26",
+    "jitd/authority_study.py": "4a0708cdd10173c93f362be035af9f4c0d1c84d46ab6aa5164d4e3c2f8afa9bb",
+    "jitd/bench.py": "0c599625a0c63316e3e62a93e13b78017ebdc0bde62c410b3ed78ca3e598ea2a",
+    "jitd/boundary.py": "de2fc71b8db35a598543df5c224f388d6e7e5fe34b012bdfbcbe2f9ddc37628e",
+    "jitd/canvas.py": "5d8d03eff48be6272769ea8e274836bc4796340445db0bc066dc896a2061e254",
+    "jitd/canvas_api.py": "325e23d5d3c6b58c1f317c9a28e4ba96634a723e63387f3751d19de7095b2cba",
+    "jitd/compiler.py": "bea77e7b21b6d8406943ecde7aaa45ea2ae0c19b2df22a303e49c621af4b16ad",
+    "jitd/contracts.py": "63eedb1fe8a1577c4db038558aa5c6f50c5c697203565801f7ab6297c7219e2a",
+    "jitd/diagnosis.py": "5a10c02616bd52f91b47b4c361564319acd8b5d29f841ef1bf53bbda545c293c",
+    "jitd/escalation.py": "1b6cc0ddfc97a860bc339b055d12752353b6404841d1d53f1b4d2564ef5f994e",
+    "jitd/evidence_csv.py": "48df253bd7c21178ab5c8e6b5efc4ac751b5414db4ac807dcd3e15e98081b393",
+    "jitd/executor.py": "4335630d1caf5ff31d43d63ac1421ebc1b534997e683cdae62a9f5bd097e438e",
+    "jitd/external.py": "dd79acd5a1b984323dd2b99179c18081f2a5a075e3eca08722d5aecd402af758",
+    "jitd/fixtures.py": "6f55d0b639c99eb7f0b4d3ada4a9f3e4d6ae1f54dca90509b11ffe42ee506cb4",
+    "jitd/http_connector.py": "db8b07cf39d53763f4b96ae975c0ce924f73748576994051c6b5a74d0b5f2e39",
+    "jitd/hybrid.py": "ef4c2e9d722c82df901bb2cf5a3b9f10eb2d83e09b2c179a8bc44e61ed7c08b3",
+    "jitd/hybrid_api.py": "342cebe606bca7be4e52a2a7a5a72468c5de7aab6e0ac0f7ad0266e2b1501559",
+    "jitd/hybrid_bench.py": "e35f86143c7436d446927cbc5870c8054d25b354fa107052fde17508e6f9de61",
+    "jitd/integrate.py": "2be42d40bb91e0cc3c86591475a7126ad808bdb350b0c88af1b4ed23bc3debaf",
+    "jitd/lab.py": "0d1c677cd7d6d0e0ab257ad864c9de8c595c40ce1281b7a400a564984dfba98f",
+    "jitd/launch.py": "2e0c407724df1fc70a0dae02a86c799dd7cc5d2573e8fcdfbb16ee10a2f5730b",
+    "jitd/live.py": "1cb651c2668dcbb2ca5fac22260969a88b97bc8a82e0e69836a05fc7111a5b23",
+    "jitd/llm.py": "4d6963ab8cc76733f9b092763d39f2ed3c12f6776c52f06d81535f9f13400754",
+    "jitd/manifest.py": "9e18820f44c08e53df19ce436fd5c031f9b58caccb2aeceb4e90e1b1c675f043",
+    "jitd/meter.py": "cfedd52d89418f2fc4ca7804e68c113a8568815f0be252962572a53f02250dd5",
+    "jitd/model_baseline.py": "95608dd27c7192263975bce825da76c68e4ea14e9c721afb5af3c2ffc860cca1",
+    "jitd/money.py": "bc67b9dee05f86fe5497ded8b194aabfe5e6442c0aa9eda0ba3d21f39bdb3760",
+    "jitd/mutations.py": "b7dcd40c6e176187bb4de2036d52cc5c1c9e3d2076b13d5c067ea488a69ed02d",
+    "jitd/nebius_smoke.py": "01f5740c02e254d9acfd0ef133a145d08ee3a1c61eb905b270c5013e3636cfc6",
+    "jitd/operations.py": "a22e5ff356f9e18befeec5ea0882dba17c5a4b2e4da8ff9e0eb6d1192fd5bc51",
+    "jitd/ops.py": "fca83c196e9bf29948607bcf9ef7c91bc934791e32ead8e8b4eeba83a9a658d4",
+    "jitd/oracle.py": "942d2fd5ba3c9c1909372bad23bf791ee7d49359a699d60a333cf3277330a806",
+    "jitd/paired_study.py": "5d118db0e50b66789faa185a9daa0c3e12d09f8ba858503bac37ca9b1b87f6f6",
+    "jitd/paths.py": "ab3d4993fd12b8c6276e69b3641e6857c6c5cbcb31e1514e0c77d6b7c34b9078",
+    "jitd/pilot.py": "cf25847a47c2f19b7b7efc5785d76c84667b10a14d06ecf6c2b64826044af2ff",
+    "jitd/platform.py": "13b8645d2832ba16ed9302ca0ecb0bc3cf04ee7d8bb9b7c357aeb690216d6ab1",
+    "jitd/readiness.py": "04b546b5cd2463cf82730ebe59763e860c94d67ef49897c036e0d97fa5f9daa8",
+    "jitd/recovery.py": "d9201be06608f2e0535b4286c724f7778ca0633f0cde6c77e89d6ee21ce7d23e",
+    "jitd/repair.py": "965205e49237131db3ccc5b79bd880459f09586120469c75ad550a11a93f79c5",
+    "jitd/scenarios.py": "1f11d89b9f31a144e8c280443373611e853e7f9a83b95fd74c96192007dfdcce",
+    "jitd/schemas.py": "854adbe43a0243c470797e4ae0344a8a2545a46b3e0e58607e360cc72d1f74ae",
+    "jitd/sdk.py": "07c68c48db1b4b6a27e6b6766b8c07789666ec0b5901fd12be7cf5c0fae2f148",
+    "jitd/server.py": "9ea5ab6830820a51fba317a1d02c4b599eed071f38dc27f6d77daed590df0071",
+    "jitd/services.py": "00e354ff5d65f37b0e1769cae02c0d7ccfa54ca2c2c10bfbfaddc2e1e766a199",
+    "jitd/shadow.py": "d42a88f2eee6518b5fe744c9c9f83b0a6683c3b08ad1dedabb93686b4fb5715a",
+    "jitd/storage.py": "9459e1438a9b5f7131ef9b994e33449405c4f6e00c65ecaf2cb56baab49e901d",
+    "jitd/stream_stats.py": "14d8cf8a394edd42f8b8ce27bbb80ac1bda8bc618aafbe2c640be0fe16f9ff7b",
+    "jitd/studio.py": "96f644f7857b4ed37266db68faea90c309d7ebfad3e6e08e243dbd875bf8f617",
+    "jitd/studio_api.py": "ed2eee1b2937f0056ddaa10ecf151711ca2c0c627aed8600b3dcee327e56ddc0",
+    "jitd/validate_worker.py": "205e3da8dffcaa4af365d2baa3ae0ff1a21bd350d8f283554db5a753007196ae",
+    "jitd/validation.py": "20092abcb1c69c021f1d7273e99a6b3d1a9eed14b6f9281c5ea69069c978e38b",
+    "web/assets/aair.js": "4b592e8f110f5560e4cf76c5fff7ea9d289c1db6d5510050332927c8eca46156",
+    "web/assets/app.css": "a3c773d90c189c2f488e77bf81942b9e3dcfc577e01a27df071a4d4e236b68a6",
+    "web/assets/app.js": "a75295a1d786e72d3b342a272f65ad0a77ea1c87fc171a8761048ea766131ad6",
+    "web/assets/axion-builder.css": "1b666cea410e456c338a6c6a401bc43b1099672b47a65bac9175e78398390f59",
+    "web/assets/axion-workspace.css": "e20261fe97ec1c3f3788ff5a34e6523abbf2768bf0d0964344fc3411ebc887f4",
+    "web/assets/builder.css": "d3339cdf6f9029bd136ad8c928565f5b89227a455b546eff6a9977ee852dc7cd",
+    "web/assets/builder.js": "27e810dc4d1cdf3e26975fe4d3a29316410286028c5e493456671646fff10162",
+    "web/assets/home.css": "f637a33a5f3ec18418b9d847d3fee187547c62ed45c90ec245a24b27415f49b0",
+    "web/assets/home.js": "c1403f406bcff51b7c2e9127c19f6edd5e508347aee26862ec73f67ad954d81a",
+    "web/assets/motion.css": "235a68678747d17c225304fac8d45b5a896a85019c014bd290faf533387bc39e",
+    "web/assets/motion.js": "4f820ffdbfcac623d821dad91657bd845b49a3cb9c5788b6af8d1a78a97144e4",
+    "web/assets/operations.js": "679318c21b54b881a4e9cc2b3ff6a9bca07451c9f5b18895a991fb6b65113c03",
+    "web/assets/pilot.js": "9e87394e35eaa8cb10b46c265ea18e5895d0f44635c0afa786192062141ac1fa",
+    "web/assets/platform.css": "7cbff11eae214e7e7cfa8d24f15a814a1d57f9b1250088baf14fb687760ca744",
+    "web/assets/platform.js": "2c3228a2dd74d4c23c8de9dba776283d7016ee6b0491886b902822aa5b9a7e1f",
+    "web/assets/studio.css": "d789a20c2dea664319522e2e4ff134ffbe5f103865f213d0f9db22958b92450d",
+    "web/assets/studio.js": "f23c04b57d2357d02f5250454b57cc4f9576d877290890dd6a5c320865741d16",
+    "web/builder.html": "53f6b63162e655637f8c116a93cee984b17a7c676905be1fdbe034406522cec9",
+    "web/home.html": "a831cac93fb9f5680ea107e04af0386de1f48bb64273dfd781582d23626b1892",
+    "web/index.html": "7535a32cffc686d6b6402cbe226da4d0838c904cdebcc4df74414b2be77593c0",
+    "web/operations.html": "77efc970084987bee0e6f4c1e4fa283ba4db0b85a1498ec50e1dd6af608c7160",
+    "web/studio.html": "6e65772b1c5ef035a0aa0267460d661214aa5f7e5754aa51dbad26a27df2fccb"
+  },
+  "visual_builder_browser": {
+    "errors": [],
+    "mobileOverflow": false,
+    "checks": [
+      "drag-add-reorder-summary",
+      "hash-bound-template-validation",
+      "separate-reviewer",
+      "published-clean-execution",
+      "semantic-drift-block",
+      "missing-evidence-block",
+      "hybrid-observation",
+      "missing-evidence-no-model",
+      "memory-only-key-entry",
+      "zero-model-budget",
+      "token-cost-projection",
+      "mobile-viewer"
+    ],
+    "providerCalls": 0
+  },
+  "visual_templates": 10,
+  "live_provider_calls_during_release": 0,
+  "hybrid_controller": {
+    "persistent": true,
+    "tests": 9,
+    "risk_estimator": "Beta predicate violation proxy, not calibrated error probability",
+    "benchmark": "benchmark/hybrid/controller.json",
+    "model_calls_during_release": 0,
+    "auto_assistance": "opt-in; policy eligibility + attempt ledger + one persistent claim per run"
+  },
+  "design_browser": {
+    "errors": [],
+    "failed": [],
+    "desktopOverflow": false,
+    "mobileOverflow": false,
+    "builderOverflow": false,
+    "heroRenderer": "native_webgl",
+    "checks": [
+      "home-links",
+      "build-cta",
+      "studio-route",
+      "system-readiness",
+      "mobile-menu",
+      "escape-dismissal",
+      "mobile-builder",
+      "reduced-motion"
+    ],
+    "modelCalls": 0
+  },
+  "design_reference": "User supplied Axion Studio design direction, adapted to JIT-D",
+  "no_external_design_assets_required": true,
+  "previous_full_suite": {
+    "passed": 289,
+    "failed": 0,
+    "seconds": 72.99
+  },
+  "pointer_and_responsive_browser": {
+    "errors": [],
+    "checks": [
+      "actual-shader-pointer-response",
+      "card-pointer-tilt",
+      "magnetic-primary-cta",
+      "36-responsive-route-width-checks",
+      "coarse-pointer-reduced-motion",
+      "mobile-16px-inputs",
+      "44px-navigation-targets"
+    ],
+    "matrix": [
+      {
+        "width": 320,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 320,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 360,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 600,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 600,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 600,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 600,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 768,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 900,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 900,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 900,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 900,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 1024,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 1024,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 1024,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 1024,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 1440,
+        "route": "/operations",
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "route": "/",
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "route": "/builder",
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "route": "/studio",
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "route": "/operations",
+        "overflow": false
+      }
+    ],
+    "modelCalls": 0
+  }
+}

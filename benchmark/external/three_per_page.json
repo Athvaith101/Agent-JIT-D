@@ -1,0 +1,4 @@
+{"id": "three_per_page", "title": "Provider pages at 3 payments", "kind": "drift", "fault_op": "payment.list", "repairable": true,
+ "author": "JIT-D authors (EXAMPLE, not independent)", "independent": false, "installments": 5,
+ "desc": "A different page size than the built-in truncation scenario, with 5 instalments per invoice.",
+ "mutations": [{"endpoint": "payment.list", "op": "page_size", "value": 3}]}

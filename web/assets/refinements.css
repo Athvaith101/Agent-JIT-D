@@ -1,0 +1,27 @@
+/* Glass navigation, restrained motion, and readable workspace support. */
+.nav-pill, .app-nav, body>aside, .app-body>header, .shell>header{
+ background:rgba(250,250,248,.82);backdrop-filter:blur(22px) saturate(130%);-webkit-backdrop-filter:blur(22px) saturate(130%);
+ box-shadow:inset 0 1px 0 #fff9,0 8px 32px #20211f05;
+}
+.nav-pill{border:1px solid #fff9;background:rgba(255,255,255,.72)}
+.primary-nav,.builder-nav,.nav-links{position:relative;isolation:isolate}
+.jd-nav-fluid{position:absolute;left:0;top:0;border-radius:24px;background:linear-gradient(120deg,#ffffffb8,#dce0d6a6);border:1px solid #fff9;box-shadow:0 3px 12px #20211f0b,inset 0 1px 0 #fff;pointer-events:none;z-index:-1;opacity:0;transition:transform .38s cubic-bezier(.22,1,.36,1),width .38s cubic-bezier(.22,1,.36,1),height .38s cubic-bezier(.22,1,.36,1),opacity .2s}
+.primary-nav>button,.builder-nav>button,.nav-links>a{position:relative;transition:color .2s,background .25s,box-shadow .25s}
+.primary-nav button:hover:not(.on),.builder-nav button:hover:not(.active){background:transparent}
+.nav-links>a{padding:7px 10px}.nav-links{gap:6px}
+.jd-footer{font:12px/1.6 system-ui,sans-serif;color:#63675e;border-top:1px solid #dfe1d9;padding:24px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:32px}
+.jd-footer strong{font-size:15px;letter-spacing:-.5px;color:#262922}.jd-footer p{margin:3px 0 0;font-size:11px}.jd-footer nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.jd-footer a{color:inherit;text-decoration:none}.jd-footer a:hover{text-decoration:underline}.jd-guide-trigger{border:1px solid #cdd1c5;border-radius:24px;padding:8px 14px;background:#ffffffb8;color:#30362b;font:600 12px system-ui;cursor:pointer;white-space:nowrap}.jd-guide-trigger:hover{background:white;box-shadow:0 3px 12px #20211f0b}.jd-guide-trigger:focus-visible,.jd-footer a:focus-visible{outline:2px solid #8c3d17;outline-offset:4px}
+.jd-guide{width:min(690px,calc(100% - 32px));max-height:calc(100svh - 48px);padding:0;border:1px solid #e0e3d8;border-radius:24px;background:#fafbf8;color:#252a20;box-shadow:0 32px 120px #19211038;font:14px/1.65 system-ui,sans-serif;overflow:auto}.jd-guide::backdrop{background:#171d245c;backdrop-filter:blur(7px)}
+.jd-guide-head{padding:28px 30px 20px;border-bottom:1px solid #e1e4dc;display:flex;justify-content:space-between;align-items:start;gap:16px}.jd-guide h2{font-size:28px;letter-spacing:-1px;line-height:1.2;margin:6px 0 10px}.jd-guide-head p{margin:0;color:#62685b;font-size:13px}.jd-guide small{font-size:11px;letter-spacing:1.6px;color:#6b735e}.jd-guide-close{border:1px solid #d9ddcf;background:white;border-radius:50%;width:36px;height:36px;font-size:23px;cursor:pointer;flex-shrink:0;color:#30362b}
+.jd-guide ol{padding:8px 30px 8px 60px;margin:12px 0}.jd-guide li{padding:9px 0 9px 7px;color:#5b6352}.jd-guide li::marker{color:#a74216;font-weight:600}.jd-guide li strong{display:block;color:#293021;font-size:14px}.jd-guide li p{margin:2px 0;font-size:13px}.jd-guide-note{background:#edf1e7;border:1px solid #dce3d3;border-radius:12px;margin:0 30px 24px;padding:13px 16px;font-size:12px;color:#4b5940}.jd-guide-bottom{padding:18px 30px;border-top:1px solid #e1e4dc;display:flex;justify-content:space-between;align-items:center;gap:18px}.jd-guide-bottom span{font-size:11px;color:#707666}.jd-guide-done{border:0;background:#292e23;color:white;border-radius:24px;padding:12px 20px;font:600 12px system-ui;cursor:pointer}
+.app-body{min-width:0}.app-body>.jd-footer{margin-top:auto}.app-body{min-height:100svh}.shell>.jd-footer{margin-top:24px}.jd-guide-launch{display:flex;justify-content:flex-end;padding:10px 30px 0}
+@supports not (backdrop-filter:blur(1px)){.nav-pill,.app-nav,body>aside,.app-body>header,.shell>header{background:#f8f9f5}}
+@media(max-width:600px){.jd-footer{padding:22px;gap:16px}.jd-footer nav{gap:14px}.jd-guide-head{padding:24px 22px 18px}.jd-guide h2{font-size:24px}.jd-guide ol{padding-left:44px;padding-right:22px}.jd-guide-note{margin:0 22px 20px}.jd-guide-bottom{padding:18px 22px;align-items:start}.jd-guide-bottom span{max-width:180px}.jd-guide-launch{padding:10px 20px 0}}
+@media(prefers-reduced-motion:reduce){.jd-nav-fluid{transition:none!important}}
+/* Bundled variable fonts: all interface weights work without a CDN. */
+@font-face{font-family:"Geist";src:url("./fonts/Geist-Variable.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("./fonts/GeistMono-Variable.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+:root{--jd-font:"Geist",system-ui,sans-serif;--jd-mono:"Geist Mono",monospace}
+body,body button,body input,body select,body textarea,body .jd-footer,body .jd-guide,body .jd-guide-trigger,body .jd-guide-done,body .jd-guide-close{font-family:var(--jd-font)}
+body code,body pre,body kbd,body samp,body pre *,body code *{font-family:var(--jd-mono)}
+.jd-guide .jd-guide-close{position:static;display:grid;place-items:center;align-self:flex-start;flex:0 0 36px;width:36px;height:36px;min-width:36px;min-height:36px;margin:0;padding:0;border-radius:50%;font-size:22px;line-height:1;box-sizing:border-box}

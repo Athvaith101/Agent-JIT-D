@@ -1,0 +1,24 @@
+# Disposable demo. SQLite lives in JITD_DATA_DIR; /tmp is ephemeral across redeploys. Run ONE instance.
+services:
+  - type: web
+    name: jitd
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerCommand: python -m jitd.launch --profile local --host 0.0.0.0
+    healthCheckPath: /api/health
+    envVars:
+      - key: JITD_MAX_MODEL_CALLS      # hard cap on paid model calls for this ephemeral demo data directory
+        value: "12"
+      - key: JITD_DATA_DIR
+        value: /tmp/jitd-data
+      - key: NEBIUS_API_KEY            # set in the Render dashboard, never in git
+        sync: false
+      - key: NEBIUS_MODEL_ID
+        sync: false
+      - key: NEBIUS_BASE_URL
+        value: https://api.tokenfactory.nebius.com/v1/
+      - key: JITD_REQUIRE_AUTH
+        value: "1"
+      - key: JITD_ACCESS_TOKEN
+        generateValue: true

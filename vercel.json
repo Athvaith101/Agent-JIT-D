@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "index.py": {
+      "maxDuration": 60,
+      "includeFiles": "{web/**,benchmark/**,evidence/**,jitd/**}",
+      "excludeFiles": "{tests/**,docs/archive/**,demo/**}"
+    }
+  }
+}

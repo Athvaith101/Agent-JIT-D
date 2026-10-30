@@ -1,0 +1,17 @@
+data/
+benchmark/results/tmp/
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+.pytest_cache/
+*.log
+nohup.out
+
+backups/
+*.backup.zip
+
+# Publish the template, never local deployment credentials.
+!.env.example
+.vercel/

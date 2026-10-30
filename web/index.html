@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent JIT-D · Verified recovery</title>
+<link rel="stylesheet" href="/static/assets/app.css">
+<link rel="stylesheet" href="/static/assets/axion-workspace.css"><link rel="stylesheet" href="/static/assets/motion.css"><link rel="stylesheet" href="/static/assets/refinements.css"><link rel="stylesheet" href="/static/assets/tokens.css"><link rel="stylesheet" href="/static/assets/components.css"><link rel="preload" href="/static/assets/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin><link rel="icon" href="/static/assets/favicon.svg" type="image/svg+xml"><meta property="og:title" content="Agent JIT-D"><meta property="og:description" content="Reason once. Verify what matters. Recover cheaply."><meta property="og:image" content="/static/assets/social-preview.png"><meta name="description" content="Agent JIT-D: evidence checks and reviewed recovery for bounded workflows."></head>
+<body>
+<div class="app-shell">
+<aside class="app-nav">
+  <a class="brand" href="/" aria-label="JIT-D home"><span class="brand-icon">JD</span> JIT-D<span class="brand-dot">β</span></a>
+  <div class="workspace-label">WORKSPACE</div><div class="workspace">Reconciliation studio <span>↗</span></div>
+  <a class="platform-link" href="/studio">Agent Studio ↗</a><nav class="primary-nav" aria-label="Main navigation">
+    <button id="tabOverview" class="on"><span>◈</span> Home</button>
+    <button id="tabIncidents"><span>◇</span> Incidents <b id="incidentCount">0</b></button>
+    <button id="tabA"><span>⌘</span> Execution</button>
+    <button id="tabPerf"><span>◫</span> Performance</button>
+    <button id="tabPilot"><span>◎</span> Pilot & readiness</button>
+    <button id="tabB"><span>▤</span> Benchmarks</button>
+  </nav>
+  <a class="platform-link" href="/operations">System & access <span>↗</span></a><div class="nav-bottom"><div class="nav-status"><i></i> Local workspace</div><p>Reason once.<br>Verify what matters.<br>Recover cheaply.</p><a href="/api/audit/export">↓ Export audit trail</a><small>Single workspace · synthetic services</small></div>
+</aside>
+<div class="app-body">
+<header>
+  <div class="breadcrumb">Workspace <span>/</span> <b id="pageTitle">Home</b></div>
+  <span class="chip mode" id="mode">Connecting…</span>
+  <span class="chip mono" id="sysstate" role="status">idle</span>
+</header>
+<div class="contextline"><span class="tag" id="wfTag">invoice-reconciliation</span><span class="chip mono" id="calls">model calls: –</span></div>
+<main id="overview" class="operations"></main>
+<main id="incidents" class="operations" hidden></main>
+<main id="pilot" class="operations" hidden></main>
+<main id="performance" class="operations" hidden></main>
+
+<div id="console" style="display:none">
+  <aside class="rail" aria-label="Controls">
+    <h3>1 · Compile</h3>
+    <button class="btn" id="bCompile">Compile workflow (deterministic)</button>
+    <button class="btn" id="bCompileM">Compile with Nemotron</button>
+    <div class="note" id="compileNote"></div>
+    <h3>2 · Replay</h3>
+    <button class="btn go" id="bRun">Run next invoice</button>
+    <button class="btn" id="bRetry" disabled>Retry the blocked invoice</button>
+    <h3>Independent evidence</h3>
+    <select id="evidenceMode" aria-label="Independent evidence availability"><option value="independent">Independent authority available</option><option value="missing">Authority unavailable → UNKNOWN</option><option value="correlated">Same-source evidence → UNKNOWN</option></select>
+    <div class="note">Synthetic authority adapter. Missing independent proof blocks posting.</div>
+    <h3>3 · Introduce semantic drift</h3>
+    <label for="scn">Provider behaviour</label>
+    <select id="scn"></select>
+    <div class="note" id="scnDesc"></div>
+    <button class="btn warn" id="bInject">Apply behaviour</button>
+    <h3>4 · Respond</h3>
+    <button class="btn" id="bDiag" disabled>Diagnose</button>
+    <button class="btn" id="bRepair" disabled>Propose validated repair</button>
+    <button class="btn" id="bWrong" disabled>Try a wrong repair (should be rejected)</button>
+    <button class="btn" id="bRepairM" disabled>Propose repair with Nemotron</button>
+    <h3>The hard case</h3>
+    <button class="btn warn" id="bHard">Compare legacy correlated blind spot</button>
+    <div class="note">Legacy reconciliation-only comparison. Strict AAIR posting gate is bypassed only in this isolated comparison.</div>
+    <h3>Lab</h3>
+    <button class="btn" id="bReset">Reset lab</button>
+    <a class="link" id="bExport" hidden>Export run JSON</a>
+    <div class="note small">All provider data is synthetic and simulated by this server.</div>
+  </aside>
+
+  <main class="center">
+    <div id="banner" class="banner neutral">Run a clean invoice, introduce a provider change, then inspect the evidence.</div>
+    <div class="graphwrap"><svg id="svg" viewBox="0 0 760 330" role="img" aria-label="Workflow dependency graph"></svg></div>
+    <div class="legend">
+      <span><i class="d cyan"></i>running / data flow</span><span><i class="d green"></i>passed</span><span><i class="d amber"></i>flagged / suspect</span>
+      <span><i class="d red"></i>halted by a failed contract</span><span><i class="d gray"></i>skipped</span><span><i class="d info"></i>re-executed after repair</span><span>┄ checkpoint reused</span>
+    </div>
+    <div id="assumptionsPanel" class="verify-panel"></div>
+    <div id="recoveryPanel"></div>
+    <h3>Event timeline <span class="dim">· real backend events</span></h3>
+    <div id="timeline" class="timeline"><div class="empty">No run yet.</div></div>
+  </main>
+
+  <aside class="side" aria-label="Evidence">
+    <h3>Evidence and diagnosis</h3>
+    <div id="evidence"><div class="empty">Select a step, or run something.</div></div>
+  </aside>
+</div>
+
+<div class="strip" id="strip" style="display:none">
+  <div><small>Run outcome</small><b id="sOut">–</b></div>
+  <div><small>Oracle verdict</small><b id="sOracle">–</b></div>
+  <div><small>Workflow version</small><b id="sVer">–</b></div>
+  <div><small>This run: model calls</small><b id="sRunCalls">–</b></div>
+  <div><small>Run time</small><b id="sMs">–</b></div>
+</div>
+
+<main id="bench" hidden></main>
+</div></div>
+<div id="toast" role="status" hidden></div>
+<dialog id="reviewDialog"><div id="reviewContent"></div></dialog>
+<script src="/static/assets/app.js"></script>
+<script src="/static/assets/operations.js"></script>
+<script src="/static/assets/aair.js"></script>
+<script src="/static/assets/pilot.js"></script>
+<script src="/static/assets/motion.js"></script><script src="/static/assets/refinements.js"></script><script src="/static/assets/product.js"></script></body>
+</html>
